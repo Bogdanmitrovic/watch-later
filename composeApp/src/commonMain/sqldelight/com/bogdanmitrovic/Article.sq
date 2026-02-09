@@ -1,0 +1,30 @@
+CREATE TABLE Article (
+    id TEXT NOT NULL PRIMARY KEY,
+    url TEXT NOT NULL,
+    title TEXT NOT NULL,
+    isRead INTEGER NOT NULL DEFAULT 0,
+    savedAt INTEGER NOT NULL
+);
+
+-- Queries
+getAll:
+SELECT * FROM Article ORDER BY savedAt DESC;
+
+getById:
+SELECT * FROM Article WHERE id = ?;
+
+getUnread:
+SELECT * FROM Article WHERE isRead = 0 ORDER BY savedAt DESC;
+
+insert:
+INSERT OR REPLACE INTO Article(id, url, title, isRead, savedAt)
+VALUES (?, ?, ?, ?, ?);
+
+updateReadStatus:
+UPDATE Article SET isRead = ? WHERE id = ?;
+
+deleteById:
+DELETE FROM Article WHERE id = ?;
+
+deleteAll:
+DELETE FROM Article;
