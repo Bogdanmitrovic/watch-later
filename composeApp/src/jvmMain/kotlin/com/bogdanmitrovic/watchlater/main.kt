@@ -7,7 +7,8 @@ import kotlinx.coroutines.Dispatchers
 
 fun main() = application {
     val database = createDatabase(DriverFactory())
-    val repository = ArticleRepository(database)
+    val api = FakeArticleApi()  // Create the fake API
+    val repository = ArticleRepository(database, api)  // Pass it here
     val viewModel = ArticleViewModel(repository, CoroutineScope(Dispatchers.Main))
 
     Window(

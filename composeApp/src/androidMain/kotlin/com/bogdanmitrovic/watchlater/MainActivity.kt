@@ -14,7 +14,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         val database = createDatabase(DriverFactory(applicationContext))
-        val repository = ArticleRepository(database)
+        val api = FakeArticleApi()
+        val repository = ArticleRepository(database, api)
         val viewModel = ArticleViewModel(repository, lifecycleScope)
 
         setContent {

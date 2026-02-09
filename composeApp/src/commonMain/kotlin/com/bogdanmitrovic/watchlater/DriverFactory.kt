@@ -10,7 +10,5 @@ expect class DriverFactory {
 fun createDatabase(driverFactory: DriverFactory): WatchLaterDatabase {
     val driver = driverFactory.createDriver()
     val database = WatchLaterDatabase(driver)
-
-    // Do more work with the database (see below).
     return database
 }
