@@ -24,7 +24,7 @@ Glavni pristup je smanjenje specijalnog koda za različite platforme, ali da ta 
 Source file-ovi su podeljeni u foldere u zavisnosti od toga za koju su platformu namenjeni, a postoji
 i commonMain folder koji sadrži fajlove koji su zajednički za sve platforme.
 
-![alt text](https://github.com/Bogdanmitrovic/watch-later/images/file-structure.png "file-structure.png")
+![alt text](images/file-structure.png "file-structure.png")
 
 Za svaku platformu postoji zaseban *entry point*, tako je za Android to MainActivity.kt, za iOS je MainViewController.kt,
 za JVM (desktop aplikacije ili druge platforme koje podržavaju JVM) je to main.kt. Takođe je podržano i
@@ -42,7 +42,7 @@ i dalje postoji, tako je, na primer, moguće koristiti Kotlin Multiplatform i Co
 sve platforme, ali UI za iOS aplikaciju praviti sa SwiftUI framework-om, ili je moguće koristiti React
 za web kao što je ranije pomenuto.
 
-![alt text](https://github.com/Bogdanmitrovic/watch-later/images/compose-example.png "compose-example.png")
+![alt text](images/compose-example.png "compose-example.png")
 
 ### expect-actual
 
@@ -52,8 +52,8 @@ nalaže da se očekuje da svaka platforma ima implementiranu tu klasu na svoj na
 može koristiti kao interfejs. U platform-specific kodu se koristi actual ključna reč da bi naglasila
 da se radi o implementaciji te klase za tu konkretnu platformu.
 
-![alt text](https://github.com/Bogdanmitrovic/watch-later/images/expect.png "expect.png")
-![alt text](https://github.com/Bogdanmitrovic/watch-later/images/actual.png "actual.png")
+![alt text](images/expect.png "expect.png")
+![alt text](images/actual.png "actual.png")
 
 U ovom projektu je to korišćeno za DriverFactory. Za lokalno skladištenje podataka je korišćena
 biblioteka [SQLDelight](https://sqldelight.github.io/sqldelight/latest/) koja olakšava pristup bazi
@@ -124,7 +124,7 @@ gde je task:
   - potrebno je instalirati JVM
 
 
-![alt text](https://github.com/Bogdanmitrovic/watch-later/images/ss1.jpg "ss1.jpg")
-![alt text](https://github.com/Bogdanmitrovic/watch-later/images/ss1.jpg "ss2.jpg")
-![alt text](https://github.com/Bogdanmitrovic/watch-later/images/ss1.jpg "ss3.jpg")
-![alt text](https://github.com/Bogdanmitrovic/watch-later/images/ss1.jpg "ss4.jpg")
+![alt text](images/ss1.jpg "ss1.jpg")
+![alt text](images/ss1.jpg "ss2.jpg")
+![alt text](images/ss1.jpg "ss3.jpg")
+![alt text](images/ss1.jpg "ss4.jpg")
